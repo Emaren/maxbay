@@ -7,13 +7,13 @@
     <link rel="manifest" href="manifest.json">
     <title>MaxBay</title>
     <style>
-        body {
+       body {
     margin: 0;
     font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh; /* Use min-height to ensure proper spacing on smaller screens */
     background-color: #f4f4f4;
 }
 
@@ -22,9 +22,10 @@
     padding: 40px 20px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 400px; /* Limits the container width */
+    width: 90%; /* Set width to 90% for smaller screens */
+    max-width: 400px; /* Restrict max width for larger screens */
     text-align: center;
+    box-sizing: border-box; /* Ensure padding doesn’t overflow the container */
 }
 
 .logo {
@@ -34,31 +35,41 @@
 
 input[type="text"],
 input[type="password"] {
-    width: 90%; /* Reduce the width slightly */
+    width: 100%; /* Ensure inputs take up full container width */
     padding: 12px;
-    margin: 15px auto; /* Center the input fields */
+    margin: 10px 0; /* Adjust margin for consistent spacing */
     border: 1px solid #ddd;
     border-radius: 4px;
-    display: block; /* Ensures centering in the container */
-    box-sizing: border-box; /* Avoids padding affecting width */
+    box-sizing: border-box; /* Avoid overflow */
 }
 
 button {
-    width: 90%; /* Align button width with inputs */
+    width: 100%; /* Button matches input width */
     padding: 12px;
-    margin: 15px auto;
+    margin: 15px 0;
     background-color: #007bff;
     color: white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     font-size: 16px;
-    display: block; /* Center the button */
+    box-sizing: border-box; /* Avoid overflow */
 }
 
 button:hover {
     background-color: #0056b3;
 }
+
+@media (max-height: 600px) {
+    body {
+        padding-top: 20px; /* Add padding for very short screens */
+    }
+
+    .login-container {
+        margin-top: 20px; /* Prevent logo from squishing the inputs */
+    }
+}
+
 
     </style>
     
