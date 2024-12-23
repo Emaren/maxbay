@@ -7,16 +7,16 @@
     <link rel="manifest" href="manifest.json">
     <title>MaxBay</title>
     <style>
-       body {
+      body {
     margin: 0;
     font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh; /* Ensure the container always vertically centers */
     background-color: #f4f4f4;
     box-sizing: border-box;
-    padding: 0 10px; /* Add padding for smaller screens */
+    padding: 0 10px; /* Add slight horizontal padding for small screens */
 }
 
 .login-container {
@@ -27,10 +27,7 @@
     width: 100%;
     max-width: 400px;
     text-align: center;
-    box-sizing: border-box; /* Prevent content overflow */
-    display: flex;
-    flex-direction: column; /* Stack content vertically */
-    align-items: center; /* Center-align children */
+    box-sizing: border-box; /* Prevent padding overflow */
 }
 
 .logo {
@@ -42,7 +39,7 @@ input[type="text"],
 input[type="password"] {
     width: 100%;
     padding: 12px;
-    margin: 10px 0; /* Ensure consistent spacing */
+    margin: 10px 0;
     border: 1px solid #ddd;
     border-radius: 4px;
     box-sizing: border-box;
@@ -67,14 +64,11 @@ button:hover {
 
 @media (max-height: 700px) {
     body {
-        height: auto; /* Allow scrolling on shorter screens */
-        padding: 20px 10px; /* Add space around the container */
-    }
-
-    .login-container {
-        margin-top: 10px; /* Adjust alignment for shorter screens */
+        justify-content: flex-start; /* Align container closer to the top for very small screens */
+        padding-top: 20px;
     }
 }
+
 
 
 
