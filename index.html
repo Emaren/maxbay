@@ -13,10 +13,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh; /* Ensure the container always vertically centers */
+    height: 100vh;
     background-color: #f4f4f4;
     box-sizing: border-box;
-    padding: 0 10px; /* Add slight horizontal padding for small screens */
+    padding: 0 10px;
 }
 
 .login-container {
@@ -27,7 +27,11 @@
     width: 100%;
     max-width: 400px;
     text-align: center;
-    box-sizing: border-box; /* Prevent padding overflow */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Ensure children are centered vertically */
+    align-items: center; /* Ensure children are centered horizontally */
 }
 
 .logo {
@@ -37,7 +41,8 @@
 
 input[type="text"],
 input[type="password"] {
-    width: 100%;
+    width: calc(100% - 20px); /* Adjust width slightly to account for container padding */
+    max-width: 360px; /* Prevent inputs from becoming too wide */
     padding: 12px;
     margin: 10px 0;
     border: 1px solid #ddd;
@@ -46,7 +51,8 @@ input[type="password"] {
 }
 
 button {
-    width: 100%;
+    width: calc(100% - 20px); /* Match button width to input fields */
+    max-width: 360px;
     padding: 12px;
     margin: 15px 0;
     background-color: #007bff;
@@ -64,10 +70,15 @@ button:hover {
 
 @media (max-height: 700px) {
     body {
-        justify-content: flex-start; /* Align container closer to the top for very small screens */
+        height: auto; /* Allow scrolling for very short screens */
         padding-top: 20px;
     }
+
+    .login-container {
+        margin-top: 10px;
+    }
 }
+
 
 
 
