@@ -13,8 +13,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh; /* Use min-height to ensure proper spacing on smaller screens */
+    height: 100vh;
     background-color: #f4f4f4;
+    box-sizing: border-box;
+    padding: 0 10px; /* Add padding for smaller screens */
 }
 
 .login-container {
@@ -22,10 +24,13 @@
     padding: 40px 20px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 90%; /* Set width to 90% for smaller screens */
-    max-width: 400px; /* Restrict max width for larger screens */
+    width: 100%;
+    max-width: 400px;
     text-align: center;
-    box-sizing: border-box; /* Ensure padding doesn’t overflow the container */
+    box-sizing: border-box; /* Prevent content overflow */
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center-align children */
 }
 
 .logo {
@@ -35,16 +40,16 @@
 
 input[type="text"],
 input[type="password"] {
-    width: 100%; /* Ensure inputs take up full container width */
+    width: 100%;
     padding: 12px;
-    margin: 10px 0; /* Adjust margin for consistent spacing */
+    margin: 10px 0; /* Ensure consistent spacing */
     border: 1px solid #ddd;
     border-radius: 4px;
-    box-sizing: border-box; /* Avoid overflow */
+    box-sizing: border-box;
 }
 
 button {
-    width: 100%; /* Button matches input width */
+    width: 100%;
     padding: 12px;
     margin: 15px 0;
     background-color: #007bff;
@@ -53,22 +58,24 @@ button {
     border-radius: 4px;
     cursor: pointer;
     font-size: 16px;
-    box-sizing: border-box; /* Avoid overflow */
+    box-sizing: border-box;
 }
 
 button:hover {
     background-color: #0056b3;
 }
 
-@media (max-height: 600px) {
+@media (max-height: 700px) {
     body {
-        padding-top: 20px; /* Add padding for very short screens */
+        height: auto; /* Allow scrolling on shorter screens */
+        padding: 20px 10px; /* Add space around the container */
     }
 
     .login-container {
-        margin-top: 20px; /* Prevent logo from squishing the inputs */
+        margin-top: 10px; /* Adjust alignment for shorter screens */
     }
 }
+
 
 
     </style>
