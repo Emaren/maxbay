@@ -1,7 +1,7 @@
 {
     "name": "MaxBay",
     "short_name": "MaxBay",
-    "start_url": "/",
+    "start_url": "/maxbay/",
     "display": "standalone",
     "background_color": "#ffffff",
     "theme_color": "#007bff",
