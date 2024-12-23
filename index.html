@@ -8,53 +8,58 @@
     <title>MaxBay</title>
     <style>
         body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f4f4f4;
-        }
-    
-        .login-container {
-            background: white;
-            padding: 40px 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            width: 100%;
-            max-width: 400px;
-            text-align: center;
-        }
-    
-        .logo {
-            width: 150px;
-            margin-bottom: 30px;
-        }
-    
-        input[type="text"],
-        input[type="password"] {
-            width: 100%;
-            padding: 12px;
-            margin: 15px 0;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-        }
-    
-        button {
-            width: 100%;
-            padding: 12px;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-    
-        button:hover {
-            background-color: #0056b3;
-        }
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+.login-container {
+    background: white;
+    padding: 40px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px; /* Limits the container width */
+    text-align: center;
+}
+
+.logo {
+    width: 150px;
+    margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 90%; /* Reduce the width slightly */
+    padding: 12px;
+    margin: 15px auto; /* Center the input fields */
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    display: block; /* Ensures centering in the container */
+    box-sizing: border-box; /* Avoids padding affecting width */
+}
+
+button {
+    width: 90%; /* Align button width with inputs */
+    padding: 12px;
+    margin: 15px auto;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    display: block; /* Center the button */
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
     </style>
     
 </head>
